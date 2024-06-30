@@ -1,10 +1,17 @@
-import { Food } from "@/Data/Menu";
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { CiForkAndKnife } from "react-icons/ci";
 import { FaMartiniGlassEmpty } from "react-icons/fa6";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import FoodList from "../Menu/Food";
+import DrinkList from "../Menu/Drink";
 const Menu = () => {
+  const [open, setOpen] = useState(true);
+
+  const activeComponents = () => {
+    setOpen(!open);
+  };
+
   return (
     <section id="menu" className="w-full h-auto bg-gray-800 pt-32 pb-10">
       <div className="flex flex-col text-white gap-10">
@@ -15,50 +22,24 @@ const Menu = () => {
         </div>
         <div className="flex flex-col">
           <div className="flex flex-row items-center justify-center gap-5">
-            <div className="p-5 bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500">
+            <button
+              onClick={activeComponents}
+              className="p-5 bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500"
+            >
               <CiForkAndKnife size={50} color="blue" />
               <h1 className="text-2xl font-bold">FOOD</h1>
-            </div>
-            <div className="p-5 bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500">
+            </button>
+            <button
+              onClick={activeComponents}
+              className="p-5 bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500"
+            >
               <FaMartiniGlassEmpty size={50} color="blue" />
               <h1 className="text-2xl font-bold">Drink</h1>
-            </div>
+            </button>
           </div>
           <div className="flex  justify-center ">
             <div className="flex flex-col justify-center w-auto bg-gray-600 items-center rounded-xl px-3 py-3">
-              <div className="flex flex-row items-center">
-                <div className="grid grid-rows-4 grid-flow-row lg:grid-flow-col px-5 py-4 gap-5">
-                  {Food.map((item) => (
-                    <div
-                      className="w-auto h-[75px] bg-gray-700 rounded-lg flex flex-row"
-                      key={item.id}
-                    >
-                      <figure className="flex items-center w-[75px] h-[75px] bg-gray-700 rounded-l-lg  px-1">
-                        <img
-                          src={item.image}
-                          alt="image"
-                          className="w-auto h-auto"
-                        />
-                      </figure>
-                      <div className="flex flex-col justify-center">
-                        <p>{item.name}</p>
-                        <p>{item.price}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-row gap-5 items-center">
-                <div className="btn btn-circle btn-ghost">
-                  <IoIosArrowBack size={32} />
-                </div>
-                <p className="text-xl">
-                  1 <span className="text-blue-500">...</span> 3
-                </p>
-                <div className="btn btn-circle btn-ghost">
-                  <IoIosArrowForward size={32} />
-                </div>
-              </div>
+              {open ? <FoodList /> : <DrinkList />}
             </div>
           </div>
         </div>
