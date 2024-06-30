@@ -36,14 +36,14 @@ const About = () => {
           </h1>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full px-10 lg:px-0 pt-5 gap-5">
-          <figure className="flex items-center justify-end ">
+          <figure className="flex items-center justify-end lg:pt-5">
             <img
               src="/About-img.jpg"
               alt=""
               className="w-[500px] h-[75%]  rounded-xl"
             />
           </figure>
-          <div className="w-[500px] h-[500px] text-white rounded-xl lg:px-5 pr-5 flex flex-col gap-2">
+          <div className="w-auto h-auto text-white rounded-xl p-5 flex flex-col gap-2">
             <h1 className="text-center text-2xl font-bold">SAVORY</h1>
             <p>
               Savory, sebuah kata yang membangkitkan selera dan aroma lezat,
