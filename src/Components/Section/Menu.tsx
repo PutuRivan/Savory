@@ -15,11 +15,11 @@ const Menu = () => {
         </div>
         <div className="flex flex-col">
           <div className="flex flex-row items-center justify-center gap-5">
-            <div className="w-[200px] h-[100px] bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500">
+            <div className="p-5 bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500">
               <CiForkAndKnife size={50} color="blue" />
               <h1 className="text-2xl font-bold">FOOD</h1>
             </div>
-            <div className="w-[200px] h-[100px] bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500">
+            <div className="p-5 bg-gray-600 rounded-t-xl flex flex-col items-center justify-center hover:bg-blue-500">
               <FaMartiniGlassEmpty size={50} color="blue" />
               <h1 className="text-2xl font-bold">Drink</h1>
             </div>
@@ -30,10 +30,10 @@ const Menu = () => {
                 <div className="grid grid-rows-4 grid-flow-row lg:grid-flow-col px-5 py-4 gap-5">
                   {Food.map((item) => (
                     <div
-                      className="w-[500px] h-[75px] bg-gray-700 rounded-lg flex flex-row"
+                      className="w-auto h-[75px] bg-gray-700 rounded-lg flex flex-row"
                       key={item.id}
                     >
-                      <figure className="flex items-center w-[80px] h-full bg-gray-700 rounded-l-lg  px-1">
+                      <figure className="flex items-center w-[75px] h-[75px] bg-gray-700 rounded-l-lg  px-1">
                         <img
                           src={item.image}
                           alt="image"
