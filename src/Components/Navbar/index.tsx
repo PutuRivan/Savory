@@ -3,7 +3,7 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   return (
-    <nav className="flex flex-row justify-center lg:justify-between items-center px-10 py-4 bg-gray-700 text-white z-50 top-0 fixed w-full h-[65px]">
+    <nav className="flex flex-row justify-center lg:justify-between items-center px-10 py-4 bg-gray-800 text-gray-200 z-50 top-0 fixed w-full h-[65px]">
       <div className="text-2xl font-bold hidden lg:flex">
         <Link href={"/"}>SAVORY</Link>
       </div>
@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href={"#contact"}>Contact</Link>
       </div>
       <div>
-        <Link href="/" className="btn btn-primary hidden lg:flex">
+        <Link href="#contact" className="btn btn-primary hidden lg:flex">
           Book Now!
         </Link>
       </div>

@@ -5,16 +5,16 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const FoodList = () => {
   const [index, setIndex] = useState(0);
-  const [full, setFull] = useState(6);
+  const [full, setFull] = useState(8);
   const LastPages = Food.length;
   const handlePrev = () => {
-    setIndex((prev) => prev - 6);
-    setFull((prev) => prev - 6);
+    setIndex((prev) => prev - 8);
+    setFull((prev) => prev - 8);
   };
 
   const handleNext = () => {
-    setIndex((prev) => prev + 6);
-    setFull((prev) => prev + 6);
+    setIndex((prev) => prev + 8);
+    setFull((prev) => prev + 8);
   };
   return (
     <div>
@@ -41,10 +41,10 @@ const FoodList = () => {
         </div>
       </div>
       <div className="flex flex-row gap-5 items-center justify-center">
-        {index <= 0 ? null : <IoIosArrowBack size={32} onClick={handlePrev} />}
-
+        {index <= 0 ? null : <IoIosArrowBack size={32} onClick={handlePrev} className="hover:cursor-pointer"/>}
+        <p>{index + 1} ... {full}</p>
         {full >= LastPages ? null : (
-          <IoIosArrowForward size={32} onClick={handleNext} />
+          <IoIosArrowForward size={32} onClick={handleNext} className="hover:cursor-pointer" />
         )}
       </div>
     </div>

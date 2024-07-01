@@ -28,10 +28,10 @@ const AboutContent = [
 ];
 const About = () => {
   return (
-    <section id="about" className="w-full  bg-gray-800 pt-32">
+    <section id="about" className="w-full  pt-32">
       <div className="w-full h-full flex flex-col">
         <div>
-          <h1 className="text-5xl font-bold text-white text-center">
+          <h1 className="text-5xl font-bold text-gray-200 text-center">
             About Us
           </h1>
         </div>
@@ -43,7 +43,7 @@ const About = () => {
               className="w-[500px] h-[75%]  rounded-xl"
             />
           </figure>
-          <div className="w-auto h-auto text-white rounded-xl p-5 flex flex-col gap-2">
+          <div className="w-auto h-auto text-gray-200 rounded-xl p-5 flex flex-col gap-2">
             <h1 className="text-center text-2xl font-bold">SAVORY</h1>
             <p>
               Savory, sebuah kata yang membangkitkan selera dan aroma lezat,
@@ -73,11 +73,11 @@ const About = () => {
         <div className="grid lg:grid-cols-3 mt-5 px-5 gap-5">
           {AboutContent.map((item) => (
             <div
-              className="bg-gray-300 rounded-xl h-[200px] flex flex-col px-5 py-2 hover:bg-blue-500"
+              className="bg-gray-400 rounded-xl h-[200px] flex flex-col px-5 py-2 hover:bg-gray-500 text-gray-800 hover:text-gray-200"
               key={item.id}
             >
               {item.logo}
-              <h1 className="text-2xl font-bold">{item.title}</h1>
+              <h1 className="text-2xl font-bold text-gray-800">{item.title}</h1>
               <p>{item.description}</p>
             </div>
           ))}

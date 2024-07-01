@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="w-full h-auto bg-gray-800 pt-32 pb-10">
+    <section id="contact" className="w-full h-auto  pt-32 pb-10">
       <div className="flex flex-col text-white w-full h-auto gap-5 px-5">
         <h1 className="text-5xl font-bold text-center">Contact</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center gap-10 h-auto w-full ">
@@ -14,29 +14,32 @@ const Contact = () => {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="flex flex-col items-center lg:items-start justify-center gap-2 lg:gap-5">
-            <form action="" className="flex flex-col gap-2 lg:gap-5">
+          <div className="flex flex-col items-center justify-center gap-2 lg:gap-5">
+            <form
+              action="mailto:puturivana.d@gmail.com"
+              className="flex flex-col gap-2 lg:gap-5"
+            >
               <div className="flex flex-col lg:flex-row  gap-2 lg:gap-10">
-                <input type="text" placeholder="Nama Depan" />
-                <input type="text" placeholder="Nama Belakang" />
+                <input type="text" placeholder="Nama Depan" className="text-black"/>
+                <input type="text" placeholder="Nama Belakang" className="text-black"/>
               </div>
               <div className="flex flex-col lg:flex-row gap-2 lg:gap-10">
-                <input type="text" placeholder="people" />
-                <input type="Date" placeholder="Date" />
+                <input type="text" placeholder="people" className="text-black"/>
+                <input type="Date" className="text-black"/>
               </div>
-              <input type="number" placeholder="Phone Number" />
-              <label className="form-control">
+              <input type="number" placeholder="Phone Number" className="text-black"/>
+              <label className="form-control" >
                 <textarea
-                  className="textarea textarea-bordered h-24"
+                  className="textarea textarea-bordered h-24 text-black"
                   placeholder="Request"
                 ></textarea>
               </label>
+              <div className="flex justify-center  w-full">
+                <button className="btn btn-primary " type="submit">
+                  Book Now
+                </button>
+              </div>
             </form>
-            <div className="flex justify-center lg:pl-52 w-full">
-              <button className="btn btn-primary " type="submit">
-                Book Now
-              </button>
-            </div>
           </div>
         </div>
       </div>

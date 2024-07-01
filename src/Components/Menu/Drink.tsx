@@ -40,10 +40,10 @@ const DrinkList = () => {
         </div>
       </div>
       <div className="flex flex-row gap-5 items-center justify-center">
-        {index <= 0 ? null : <IoIosArrowBack size={32} onClick={handlePrev} />}
-
+        {index <= 0 ? null : <IoIosArrowBack size={32} onClick={handlePrev} className="hover:cursor-pointer"/>}
+        <p>{index + 1} ... {full}</p>
         {full >= LastPages ? null : (
-          <IoIosArrowForward size={32} onClick={handleNext} />
+          <IoIosArrowForward size={32} onClick={handleNext} className="hover:cursor-pointer"/>
         )}
       </div>
     </div>
