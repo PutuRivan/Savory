@@ -1,48 +1,61 @@
 "use client";
 
 import React, { useState } from "react";
-import { CiForkAndKnife } from "react-icons/ci";
-import { FaMartiniGlassEmpty } from "react-icons/fa6";
-import FoodList from "../Menu/Food";
+import { AppetizersMenu, DessertMenu, MaincourseMenu } from "../Menu/Food";
 import DrinkList from "../Menu/Drink";
-import { PiForkKnifeDuotone } from "react-icons/pi";
-import { GiWineGlass } from "react-icons/gi";
+
 const Menu = () => {
-  const [open, setOpen] = useState(true);
-
-  const activeComponents = () => {
-    setOpen(!open);
-  };
-
+  const [open, setOpen] = useState("Appetizers");
   return (
     <section id="menu" className="w-full h-auto  pt-32 pb-10">
-      <div className="flex flex-col text-white gap-10">
+      <div className="flex flex-col text-white gap-5">
         <div>
           <h1 className="text-5xl font-bold text-white text-center">
             Our&apos;s Menu
           </h1>
         </div>
-        <div className="flex flex-col">
-          <div className="flex flex-row items-center justify-center gap-5">
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-row gap-5 items-center justify-center">
             <button
-              onClick={activeComponents}
-              className="p-5 bg-gray-800 rounded-t-xl flex flex-col items-center justify-center hover:bg-gray-500 text-gray-200 hover:text-gray-800"
+              onClick={() => setOpen("Appetizers")}
+              className={`text-xl ${
+                open === "Appetizers" ? "text-gray-500 underline" : "text-white"
+              } hover:text-gray-500 hover:font-bold  `}
             >
-              <CiForkAndKnife size={50} color="gray"/>
-              <h1 className="text-xl font-bold ">FOOD</h1>
+              <h1>Appitizer</h1>
             </button>
             <button
-              onClick={activeComponents}
-              className="p-5 bg-gray-800 rounded-t-xl flex flex-col items-center justify-center hover:bg-gray-500 text-gray-200 hover:text-gray-800"
+              onClick={() => setOpen("Main Course")}
+              className={`text-xl ${
+                open === "Main Course"
+                  ? "text-gray-500 underline"
+                  : "text-white"
+              } hover:text-gray-500 hover:font-bold  `}
             >
-              <GiWineGlass size={50} color="gray" />
-              <h1 className="text-xl font-bold ">Drink</h1>
+              <h1>Main Course</h1>
+            </button>
+            <button
+              onClick={() => setOpen("Dessert")}
+              className={`text-xl ${
+                open === "Dessert" ? "text-gray-500 underline" : "text-white"
+              } hover:text-gray-500 hover:font-bold  `}
+            >
+              <h1>Dessert</h1>
+            </button>
+            <button
+              onClick={() => setOpen("Drink")}
+              className={`text-xl ${
+                open === "Drink" ? "text-gray-500 underline" : "text-white"
+              } hover:text-gray-500 hover:font-bold  `}
+            >
+              <h1>Drink</h1>
             </button>
           </div>
-          <div className="flex  justify-center ">
-            <div className="flex flex-col justify-center w-auto bg-gray-800 items-center rounded-xl px-3 py-3">
-              {open ? <FoodList /> : <DrinkList />}
-            </div>
+          <div className="w-full h-[700px] overflow-y-auto py-2">
+            {open === "Appetizers" && <AppetizersMenu />}
+            {open === "Main Course" && <MaincourseMenu />}
+            {open === "Dessert" && <DessertMenu />}
+            {open === "Drink" && <DrinkList />}
           </div>
         </div>
       </div>

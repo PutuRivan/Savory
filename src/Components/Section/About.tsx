@@ -26,6 +26,7 @@ const AboutContent = [
     logo: <MdOutlineShoppingCart size={50} color="blue"/>
   },
 ];
+
 const About = () => {
   return (
     <section id="about" className="w-full  pt-32">
