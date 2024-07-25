@@ -10,10 +10,10 @@ const Hero = () => {
       >
         <div className="w-full h-full flex justify-center items-center ">
           <div className="lg:text-5xl text-3xl font-bold text-gray-200 flex flex-col gap-4">
-            <h1>SAVOR THE MOMENT</h1>
-            <h1>SAVOR THE FLAVOR</h1>
+            <h1 className="playwrite-dk-loopet">SAVOR THE MOMENT</h1>
+            <h1 className="playwrite-dk-loopet">SAVOR THE FLAVOR</h1>
             <div className="w-full flex items-center justify-center">
-              <a href="#contact" className="btn btn-primary">
+              <a href="#contact" className="btn btn-primary playwrite-dk-loopet">
                 BOOK NOW!
               </a>
             </div>

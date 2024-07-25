@@ -16,14 +16,14 @@ const AboutContent = [
     title: "Quality Food",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem! lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    logo: <CiForkAndKnife size={50} color="blue"/>
+    logo: <CiForkAndKnife size={50} color="blue" />,
   },
   {
     id: 3,
     title: "Online Order",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem! lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    logo: <MdOutlineShoppingCart size={50} color="blue"/>
+    logo: <MdOutlineShoppingCart size={50} color="blue" />,
   },
 ];
 
@@ -71,17 +71,21 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 mt-5 px-5 gap-5">
-          {AboutContent.map((item) => (
-            <div
-              className="bg-gray-400 rounded-xl h-[200px] flex flex-col px-5 py-2 hover:bg-gray-500 text-gray-800 hover:text-gray-200"
-              key={item.id}
-            >
-              {item.logo}
-              <h1 className="text-2xl font-bold text-gray-800">{item.title}</h1>
-              <p>{item.description}</p>
-            </div>
-          ))}
+        <div className="w-[500px] lg:w-full h-[300px] overflow-x-hidden py-1">
+          <div className="grid lg:grid-cols-3 mt-5 px-5 gap-5">
+            {AboutContent.map((item) => (
+              <div
+                className="bg-gray-400 rounded-xl h-[200px] flex flex-col px-5 py-2 hover:bg-gray-500 text-gray-800 hover:text-gray-200"
+                key={item.id}
+              >
+                {item.logo}
+                <h1 className="text-2xl font-bold text-gray-800">
+                  {item.title}
+                </h1>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

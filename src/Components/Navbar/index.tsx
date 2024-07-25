@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   return (
     <nav className="flex flex-row justify-center lg:justify-between items-center px-10 py-4 bg-gray-800 text-gray-200 z-50 top-0 fixed w-full h-[65px]">
-      <div className="text-2xl font-bold hidden lg:flex">
+      <div className="text-2xl font-bold hidden lg:flex playwrite-dk-loopet">
         <Link href={"/"}>SAVORY</Link>
       </div>
       <div className="flex flex-row gap-5 items-center justify-center">
