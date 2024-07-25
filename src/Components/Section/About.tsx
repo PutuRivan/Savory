@@ -71,13 +71,13 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-[500px] lg:w-full h-[300px] overflow-x-hidden py-1">
-          <div className="grid lg:grid-cols-3 mt-5 px-5 gap-5">
+        
+          <div className="grid lg:grid-cols-3 mt-5 px-5 gap-5 w-full h-[200px] overflow-x-auto">
             {AboutContent.map((item) => (
               <div
-                className="bg-gray-400 rounded-xl h-[200px] flex flex-col px-5 py-2 hover:bg-gray-500 text-gray-800 hover:text-gray-200"
+                className="bg-gray-400 w-full rounded-xl h-[200px] flex flex-col px-5 py-2 hover:bg-gray-500 text-gray-800 hover:text-gray-200"
                 key={item.id}
-              >
+              > 
                 {item.logo}
                 <h1 className="text-2xl font-bold text-gray-800">
                   {item.title}
@@ -86,7 +86,7 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        
       </div>
     </section>
   );
