@@ -2,6 +2,7 @@ import React from "react";
 import { TbChefHat } from "react-icons/tb";
 import { CiForkAndKnife } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import Marquee from "react-fast-marquee";
 
 const AboutContent = [
   {
@@ -44,7 +45,7 @@ const About = () => {
               className="w-[500px] h-[75%]  rounded-xl"
             />
           </figure>
-          <div className="w-auto h-auto text-gray-200 rounded-xl p-5 flex flex-col gap-2">
+          <div className="w-auto h-[400px] bg-gray-700 overflow-auto text-gray-200 rounded-xl p-5 flex flex-col gap-2">
             <h1 className="text-center text-2xl font-bold">SAVORY</h1>
             <p>
               Savory, sebuah kata yang membangkitkan selera dan aroma lezat,
@@ -71,22 +72,18 @@ const About = () => {
           </div>
         </div>
 
-        
-          <div className="grid lg:grid-cols-3 mt-5 px-5 gap-5 w-full h-[200px] overflow-x-auto">
-            {AboutContent.map((item) => (
-              <div
-                className="bg-gray-400 w-full rounded-xl h-[200px] flex flex-col px-5 py-2 hover:bg-gray-500 text-gray-800 hover:text-gray-200"
-                key={item.id}
-              > 
-                {item.logo}
-                <h1 className="text-2xl font-bold text-gray-800">
-                  {item.title}
-                </h1>
-                <p>{item.description}</p>
-              </div>
-            ))}
-          </div>
-        
+        <Marquee autoFill className="mt-10">
+          {AboutContent.map((item) => (
+            <div
+              className="bg-gray-700 w-[500px] rounded-xl h-[200px] flex flex-col px-5 py-2 text-white hover:text-gray-400 mx-2"
+              key={item.id}
+            >
+              {item.logo}
+              <h1 className="text-2xl font-bold text-white">{item.title}</h1>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </Marquee>
       </div>
     </section>
   );

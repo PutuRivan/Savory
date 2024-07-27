@@ -20,17 +20,17 @@ const Contact = () => {
               className="flex flex-col gap-2 lg:gap-5"
             >
               <div className="flex flex-col lg:flex-row  gap-2 lg:gap-10">
-                <input type="text" placeholder="Nama Depan" className="text-black"/>
-                <input type="text" placeholder="Nama Belakang" className="text-black"/>
+                <input type="text" placeholder="Nama Depan" className="input input-bordered w-full max-w-xs bg-white text-black  "/>
+                <input type="text" placeholder="Nama Belakang" className="input input-bordered w-full max-w-xs bg-white text-black"/>
               </div>
               <div className="flex flex-col lg:flex-row gap-2 lg:gap-10">
-                <input type="text" placeholder="people" className="text-black"/>
-                <input type="Date" className="text-black"/>
+                <input type="text" placeholder="people" className="input input-bordered w-full max-w-xs bg-white text-black"/>
+                <input type="Date" className="input input-bordered w-full max-w-xs bg-white text-black"/>
               </div>
-              <input type="number" placeholder="Phone Number" className="text-black"/>
+              <input type="number" placeholder="Phone Number" className="input input-bordered w-full max-w-xs bg-white text-black"/>
               <label className="form-control" >
                 <textarea
-                  className="textarea textarea-bordered h-24 text-black"
+                  className="textarea textarea-bordered h-24 text-black bg-white"
                   placeholder="Request"
                 ></textarea>
               </label>

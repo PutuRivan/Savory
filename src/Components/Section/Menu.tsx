@@ -19,8 +19,8 @@ const Menu = () => {
             <button
               onClick={() => setOpen("Appetizers")}
               className={`text-xl ${
-                open === "Appetizers" ? "text-gray-500 underline" : "text-white"
-              } hover:text-gray-500 hover:font-bold  `}
+                open === "Appetizers" ? "text-blue-600 underline" : "text-white"
+              } hover:text-blue-600 hover:font-bold  `}
             >
               <h1>Appitizer</h1>
             </button>
@@ -28,30 +28,30 @@ const Menu = () => {
               onClick={() => setOpen("Main Course")}
               className={`text-xl ${
                 open === "Main Course"
-                  ? "text-gray-500 underline"
+                  ? "text-blue-600 underline"
                   : "text-white"
-              } hover:text-gray-500 hover:font-bold  `}
+              } hover:text-blue-600 hover:font-bold  `}
             >
               <h1>Main Course</h1>
             </button>
             <button
               onClick={() => setOpen("Dessert")}
               className={`text-xl ${
-                open === "Dessert" ? "text-gray-500 underline" : "text-white"
-              } hover:text-gray-500 hover:font-bold  `}
+                open === "Dessert" ? "text-blue-600 underline" : "text-white"
+              } hover:text-blue-600 hover:font-bold  `}
             >
               <h1>Dessert</h1>
             </button>
             <button
               onClick={() => setOpen("Drink")}
               className={`text-xl ${
-                open === "Drink" ? "text-gray-500 underline" : "text-white"
-              } hover:text-gray-500 hover:font-bold  `}
+                open === "Drink" ? "text-blue-600 underline" : "text-white"
+              } hover:text-blue-600 hover:font-bold  `}
             >
               <h1>Drink</h1>
             </button>
           </div>
-          <div className="w-full h-[700px] overflow-y-auto py-2">
+          <div className="w-full h-[750px] overflow-y-auto py-2">
             {open === "Appetizers" && <AppetizersMenu />}
             {open === "Main Course" && <MaincourseMenu />}
             {open === "Dessert" && <DessertMenu />}

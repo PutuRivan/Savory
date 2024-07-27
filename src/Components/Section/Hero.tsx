@@ -8,7 +8,7 @@ const Hero = () => {
       <div
         className={`bg-Hero-Pattern bg-cover bg-center bg-no-repeat h-screen w-full`}
       >
-        <div className="w-full h-full flex justify-center items-center ">
+        <div className="w-full h-full flex flex-col justify-center items-center ">
           <div className="lg:text-5xl text-3xl font-bold text-gray-200 flex flex-col gap-4">
             <div className="flex flex-col justify-center items-center">
               <h1 className="playwrite-dk-loopet">SAVOR THE MOMENT</h1>
