@@ -15,12 +15,12 @@ const Hero = () => {
               <h1 className="playwrite-dk-loopet">SAVOR THE FLAVOR</h1>
             </div>
             <div className="w-full flex items-center justify-center">
-              <a
-                href="#contact"
+              <button
                 className="btn btn-primary playwrite-dk-loopet"
+                onClick={() =>document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 BOOK NOW!
-              </a>
+              </button>
             </div>
           </div>
         </div>
