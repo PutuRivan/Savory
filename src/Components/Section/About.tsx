@@ -10,21 +10,21 @@ const AboutContent = [
     title: "Our Chef",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem! lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    logo: <TbChefHat size={50} color="blue" />,
+    logo: <TbChefHat size={50} color="#FFCB74" />,
   },
   {
     id: 2,
     title: "Quality Food",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem! lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    logo: <CiForkAndKnife size={50} color="blue" />,
+    logo: <CiForkAndKnife size={50} color="#FFCB74" />,
   },
   {
     id: 3,
     title: "Online Order",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem! lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    logo: <MdOutlineShoppingCart size={50} color="blue" />,
+    logo: <MdOutlineShoppingCart size={50} color="#FFCB74" />,
   },
 ];
 
@@ -33,20 +33,20 @@ const About = () => {
     <section id="about" className="w-full  pt-32">
       <div className="w-full h-full flex flex-col">
         <div>
-          <h1 className="text-5xl font-bold text-gray-200 text-center">
+          <h1 className="text-5xl font-bold text-primary text-center">
             About Us
           </h1>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full px-10 lg:px-0 pt-5 gap-5">
-          <figure className="flex items-center justify-end lg:pt-5">
+          <figure className="flex items-center justify-center lg:pt-5">
             <img
               src="/About-img.jpg"
               alt=""
               className="w-[500px] h-[75%]  rounded-xl"
             />
           </figure>
-          <div className="w-auto h-[400px] bg-gray-700 overflow-auto text-gray-200 rounded-xl p-5 flex flex-col gap-2">
-            <h1 className="text-center text-2xl font-bold">SAVORY</h1>
+          <div className="w-auto h-[400px] bg-secondary overflow-auto text-gray-200 rounded-xl p-5 flex flex-col gap-2">
+            <h1 className="text-center text-2xl font-bold text-primary">SAVORY</h1>
             <p>
               Savory, sebuah kata yang membangkitkan selera dan aroma lezat,
               membawa kita ke dunia kuliner yang penuh dengan rasa gurih yang
@@ -75,12 +75,12 @@ const About = () => {
         <Marquee autoFill className="mt-10">
           {AboutContent.map((item) => (
             <div
-              className="bg-gray-700 w-[500px] rounded-xl h-[200px] flex flex-col px-5 py-2 text-white hover:text-gray-400 mx-2"
+              className="bg-secondary w-[500px] rounded-xl h-[200px] flex flex-col px-5 py-2  mx-2"
               key={item.id}
             >
               {item.logo}
-              <h1 className="text-2xl font-bold text-white">{item.title}</h1>
-              <p>{item.description}</p>
+              <h1 className="text-2xl font-bold text-accent">{item.title}</h1>
+              <p className="text-accent">{item.description}</p>
             </div>
           ))}
         </Marquee>

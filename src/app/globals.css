@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+body{
+  background-color: #111111;
+}
+
 input {
     padding: 10px;
     border-radius: 10px;

@@ -22,15 +22,10 @@ const config: Config = {
     themes: [
       {
         mytheme: {
-          primary: "#007dff",
-          secondary: "#4900ff",
-          accent: "#a10000",
-          neutral: "#11252d",
-          "base-100": "#242424",
-          info: "#008ec3",
-          success: "#00aa00",
-          warning: "#ffb200",
-          error: "#c90a2d",
+          primary: "#FFCB74",
+          secondary: "#2F2F2F",
+          accent: "#F6F6F6",
+          "base-100": "#111111",
         },
       },
     ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]

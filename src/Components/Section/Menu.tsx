@@ -8,9 +8,9 @@ const Menu = () => {
   const [open, setOpen] = useState("Appetizers");
   return (
     <section id="menu" className="w-full h-auto  pt-32 pb-10">
-      <div className="flex flex-col text-white gap-5">
+      <div className="flex flex-col text-accent gap-5">
         <div>
-          <h1 className="text-5xl font-bold text-white text-center">
+          <h1 className="text-5xl font-bold text-center text-primary">
             Our&apos;s Menu
           </h1>
         </div>
@@ -19,8 +19,8 @@ const Menu = () => {
             <button
               onClick={() => setOpen("Appetizers")}
               className={`text-xl ${
-                open === "Appetizers" ? "text-blue-600 underline" : "text-white"
-              } hover:text-blue-600 hover:font-bold  `}
+                open === "Appetizers" ? "text-primary underline" : "text-accent"
+              } hover:text-primary hover:font-bold  `}
             >
               <h1>Appitizer</h1>
             </button>
@@ -28,25 +28,25 @@ const Menu = () => {
               onClick={() => setOpen("Main Course")}
               className={`text-xl ${
                 open === "Main Course"
-                  ? "text-blue-600 underline"
-                  : "text-white"
-              } hover:text-blue-600 hover:font-bold  `}
+                  ? "text-primary underline"
+                  : "text-accent"
+              } hover:text-primary hover:font-bold  `}
             >
               <h1>Main Course</h1>
             </button>
             <button
               onClick={() => setOpen("Dessert")}
               className={`text-xl ${
-                open === "Dessert" ? "text-blue-600 underline" : "text-white"
-              } hover:text-blue-600 hover:font-bold  `}
+                open === "Dessert" ? "text-primary underline" : "text-accent"
+              } hover:text-primary hover:font-bold  `}
             >
               <h1>Dessert</h1>
             </button>
             <button
               onClick={() => setOpen("Drink")}
               className={`text-xl ${
-                open === "Drink" ? "text-blue-600 underline" : "text-white"
-              } hover:text-blue-600 hover:font-bold  `}
+                open === "Drink" ? "text-primary underline" : "text-accent"
+              } hover:text-primary hover:font-bold  `}
             >
               <h1>Drink</h1>
             </button>

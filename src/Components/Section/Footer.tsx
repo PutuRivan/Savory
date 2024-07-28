@@ -4,7 +4,7 @@ import { FaGithub, FaSquareTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-gray-800 text-neutral-content items-center p-4">
+    <footer className="footer bg-base-100 text-accent items-center p-4">
       <aside className="grid-flow-col items-center">
         <svg
           width="36"
@@ -21,13 +21,13 @@ const Footer = () => {
       </aside>
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a href="https://www.instagram.com/rivanputu_" target="_blank">
-          <CgInstagram size={24}/>
+          <CgInstagram size={24} />
         </a>
         <a href="https://github.com/PutuRivan" target="_blank">
-          <FaGithub size={24}/>
+          <FaGithub size={24} />
         </a>
         <a href="https://twitter.com/rivanputu_" target="_blank">
-          <FaSquareTwitter size={24}/>
+          <FaSquareTwitter size={24} />
         </a>
       </nav>
     </footer>

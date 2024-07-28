@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <section id="contact" className="w-full h-auto  pt-32 pb-10">
-      <div className="flex flex-col text-white w-full h-auto gap-5 px-5">
+      <div className="flex flex-col text-primary w-full h-auto gap-5 px-5">
         <h1 className="text-5xl font-bold text-center">Contact</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center gap-10 h-auto w-full ">
           <div className="flex items-center justify-end">
